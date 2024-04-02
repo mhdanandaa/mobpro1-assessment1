@@ -1,5 +1,7 @@
 package org.d3if3066.laundryahlanwasahlan.ui.screen
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,6 +29,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionContext
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
@@ -43,6 +46,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.text.isDigitsOnly
 import org.d3if3066.laundryahlanwasahlan.R
 import org.d3if3066.laundryahlanwasahlan.ui.theme.LaundryAhlanWaSahlanTheme
 
@@ -151,14 +155,13 @@ fun ScreenContent(modifier: Modifier) {
 
         Button(
             onClick = {
-                namaPelangganError = (namaPelanggan == "")
+                namaPelangganError = (namaPelanggan == "" || namaPelanggan.isDigitsOnly())
                 beratLaundryError = (beratLaundry == "" || beratLaundry == "0")
                 
                 if(namaPelangganError || beratLaundryError) {
                     return@Button
                 }
 
-                namaPelanggan = nama(namaPelanggan)
                 totalHarga = hargaLaundry(beratLaundry.toFloat(), kategori == radioOptions[0])
             },
             modifier = Modifier.padding(top = 8.dp),
@@ -172,17 +175,22 @@ fun ScreenContent(modifier: Modifier) {
                 modifier = Modifier.padding(vertical = 8.dp),
                 thickness = 1.dp
             )
-
-            Text(
-                text = stringResource(R.string.nama_x, namaPelanggan),
-                style = MaterialTheme.typography.titleLarge
-
-            )
-
             Text(
                 text = stringResource(R.string.harga, totalHarga),
                 style = MaterialTheme.typography.titleLarge
             )
+            Button(
+                onClick = {
+                    shareData(
+                        context = context,
+                        message = context.getString(R.string.bagikan_template, namaPelanggan, kategori, beratLaundry, totalHarga)
+                    )
+                },
+                modifier = Modifier.padding(top = 60.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(R.string.bagikan) )
+            }
         }
 
     }
@@ -222,16 +230,22 @@ fun ErrorHint(isError: Boolean) {
     }
 
 }
-
-private fun nama(namaPelanggan: String): String {
-    return namaPelanggan
-}
 private fun hargaLaundry(beratLaundry: Float, isDry: Boolean): Float {
     return if (isDry) {
         beratLaundry * 5000
     }
     else {
         beratLaundry * 6000
+    }
+}
+
+private fun shareData(context: Context, message: String) {
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if(shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
     }
 }
 
