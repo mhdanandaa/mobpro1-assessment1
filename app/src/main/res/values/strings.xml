@@ -21,4 +21,12 @@
     \nSilahkan cucian anda sudah dapat diambil ditempat
     \n\Terima Kasih!</string>
     <string name="bagikan">Bagikan</string>
+    <string name="tentang_aplikasi">Tentang aplikasi</string>
+    <string name="kembali">Kembali</string>
+    <string name="info_aplikasi">Aplikasi Laundry Ahlan Wa Sahlan merupakan sebuah aplikasi yang dibikin untuk pemilik dan penjaga dari Laundry Ahlan Wa Sahalan.
+        \nAplikasi ini berfungsi untuk memudahkan penjaga Laundry Ahlan Wa Sahlan ketika ingin memberi tahu pelanggan bahwa cucian mereka telah selesai.
+        \nAplikasi ini juga dibuat agar pemilik Laundry Ahlan Wa Sahlan tidak perlu memberi faktur dalam bentuk kertas, sehingga bisa ramah lingkungan.
+        \n\nCopyright © 2024 - Mhd. Ananda Ridho Alfadillah
+</string>
+    <string name="imgae_description">Gambar Laundry Ahlan Wa Sahlan</string>
 </resources>
