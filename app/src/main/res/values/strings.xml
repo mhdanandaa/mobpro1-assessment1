@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Laundry Ahlan Wa Sahlan</string>
+    <string name="intro">Aplikasi laundry Ahlan Wa Sahlan merupakan sebuah inovasi untuk mengurangi penggunaan kertas di lingkungan</string>
+    <string name="nama_pelanggan">Nama Pelanggan </string>
+    <string name="nama_x">Nama : %1$s </string>
+    <string name="berat_laundry">Berat Laundry</string>
+    <string name="harga">Total Harga : Rp. %1$,.2f</string>
+    <string name="kategori">Kategori Laundry</string>
+    <string name="status_pembayaran">Status Pembayaran</string>
+    <string name="input_invalid">Data tidak boleh kosong!</string>
+    <string name="cuci_kering">Cuci kering</string>
+    <string name="cuci_setrika">Cuci setrika</string>
+    <string name="hitung">Hitung</string>
 </resources>
