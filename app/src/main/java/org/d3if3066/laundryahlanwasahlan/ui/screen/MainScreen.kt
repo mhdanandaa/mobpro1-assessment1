@@ -122,7 +122,7 @@ fun ScreenContent(modifier: Modifier) {
             onValueChange = {namaPelanggan = it},
             label = { Text(text = stringResource(R.string.nama_pelanggan))},
             isError = namaPelangganError,
-            supportingText = {ErrorHint(namaPelangganError)},
+            supportingText = { ErrorHintNama(namaPelangganError) },
             singleLine = true,
             keyboardOptions = KeyboardOptions(
                 keyboardType = KeyboardType.Text,
@@ -257,7 +257,15 @@ fun IconPicker(isError: Boolean, unit: String) {
 @Composable
 fun ErrorHint(isError: Boolean) {
     if (isError) {
-        Text(text = stringResource(R.string.input_invalid))
+        Text(text = stringResource(R.string.input_invalid_berat))
+    }
+
+}
+
+@Composable
+fun ErrorHintNama(isError: Boolean) {
+    if (isError) {
+        Text(text = stringResource(R.string.input_invalid_nama))
     }
 
 }

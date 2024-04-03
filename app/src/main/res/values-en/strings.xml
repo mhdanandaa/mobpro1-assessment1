@@ -7,7 +7,8 @@
     <string name="harga">Total Price : Rp. %1$,.2f</string>
     <string name="kategori">Categories of laundry</string>
     <string name="status_pembayaran">Status of Payment</string>
-    <string name="input_invalid">Data must match and cannot be empty</string>
+    <string name="input_invalid_berat">Data must match and cannot be empty</string>
+    <string name="input_invalid_nama">Name must match and cannot be blank</string>
     <string name="cuci_kering">"Dry cleaning "</string>
     <string name="cuci_setrika">Iron wash</string>
     <string name="hitung">Count</string>

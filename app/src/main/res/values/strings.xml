@@ -6,7 +6,8 @@
     <string name="harga">Total Harga : Rp. %1$,.2f</string>
     <string name="kategori">Kategori Laundry</string>
     <string name="status_pembayaran">Status Pembayaran</string>
-    <string name="input_invalid">Data harus sesuai dan tidak boleh kosong</string>
+    <string name="input_invalid_berat">Data tidak boleh kosong</string>
+    <string name="input_invalid_nama">Nama harus sesuai dan tidak boleh kosong</string>
     <string name="cuci_kering">Cuci kering</string>
     <string name="cuci_setrika">Cuci setrika</string>
     <string name="hitung">Hitung</string>
