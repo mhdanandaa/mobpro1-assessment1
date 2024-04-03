@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Laundry Ahlan Wa Sahlan</string>
-    <string name="intro">Aplikasi laundry Ahlan Wa Sahlan merupakan sebuah inovasi untuk mengurangi penggunaan kertas di lingkungan</string>
+    <string name="intro">Ayo kurangi penggunaan kertas dengan menggunakan aplikasi ini!</string>
     <string name="nama_pelanggan">Nama Pelanggan </string>
     <string name="berat_laundry">Berat Laundry</string>
     <string name="harga">Total Harga : Rp. %1$,.2f</string>
@@ -10,11 +10,11 @@
     <string name="cuci_kering">Cuci kering</string>
     <string name="cuci_setrika">Cuci setrika</string>
     <string name="hitung">Hitung</string>
-    <string name="bagikan_template">Laundry Ahlan Wa Sahalan
+    <string name="bagikan_template" translatable="false">Laundry Ahlan Wa Sahalan
     \n\Jl. Ciganitri, Perumahan Permata Buah Batu 2m No.A 28
     \n------------------------------------------------------
     \n\Pelanggan atas nama : %1$s
-    \n%2$s
+    \nTipe laundry : %2$s
     \nBerat cucian : %3$s  kg
     \nTotal harga : %4$,.2f
     \n------------------------------------------------------
@@ -23,10 +23,8 @@
     <string name="bagikan">Bagikan</string>
     <string name="tentang_aplikasi">Tentang aplikasi</string>
     <string name="kembali">Kembali</string>
-    <string name="info_aplikasi">Aplikasi Laundry Ahlan Wa Sahlan merupakan sebuah aplikasi yang dibikin untuk pemilik dan penjaga dari Laundry Ahlan Wa Sahalan.
-        \nAplikasi ini berfungsi untuk memudahkan penjaga Laundry Ahlan Wa Sahlan ketika ingin memberi tahu pelanggan bahwa cucian mereka telah selesai.
-        \nAplikasi ini juga dibuat agar pemilik Laundry Ahlan Wa Sahlan tidak perlu memberi faktur dalam bentuk kertas, sehingga bisa ramah lingkungan.
-        \n\nCopyright © 2024 - Mhd. Ananda Ridho Alfadillah
-</string>
     <string name="imgae_description">Gambar Laundry Ahlan Wa Sahlan</string>
+    <string name="reset">Reset</string>
+    <string name="isi_about_aplikasi">Aplikasi Laundry Ahlan Wa Sahlan merupakan sebuah aplikasi yang dibikin untuk pemilik dan penjaga dari Laundry Ahlan Wa Sahalan.          Aplikasi ini berfungsi untuk memudahkan penjaga Laundry Ahlan Wa Sahlan ketika ingin memberi tahu pelanggan bahwa cucian mereka telah selesai.          Aplikasi ini juga dibuat agar pemilik Laundry Ahlan Wa Sahlan tidak perlu memberi faktur dalam bentuk kertas, sehingga bisa ramah lingkungan.</string>
+    <string name="copyright" translatable="false">"Copyright © 2024 - Mhd. Ananda Ridho Alfadillah"</string>
 </resources>

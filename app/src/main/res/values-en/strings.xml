@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Laundry Ahlan Wa Sahlan</string>
+    <string name="intro">Let\'s reduce the use of paper by using this app!</string>
+    <string name="nama_pelanggan">Customer name</string>
+    <string name="berat_laundry">Weight of Laundry</string>
+    <string name="harga">Total Price : Rp. %1$,.2f</string>
+    <string name="kategori">Categories of laundry</string>
+    <string name="status_pembayaran">Status of Payment</string>
+    <string name="input_invalid">Data must match and cannot be empty</string>
+    <string name="cuci_kering">"Dry cleaning "</string>
+    <string name="cuci_setrika">Iron wash</string>
+    <string name="hitung">Count</string>
+    <string name="bagikan">Share</string>
+    <string name="tentang_aplikasi">About the App</string>
+    <string name="kembali">Ba</string>
+    <string name="imgae_description">Image of Ahlan Wa Sahlan Laundry</string>
+    <string name="reset">Reset</string>
+    <string name="info_aplikasi">The Ahlan Wa Sahlan Laundry App is an app created for the owners and caretakers of the Ahlan Wa Sahalan Laundry.          This app serves to make it easier for Ahlan Wa Sahlan Laundry\'s caretakers when they want to notify customers that their laundry is done.          It was also created so that the owner of Ahlan Wa Sahlan Laundry does not need to provide paper invoices, so it can be environmentally friendly.</string>
+    <string name="isi_about_aplikasi">The Ahlan Wa Sahlan Laundry App is an app created for the owners and caretakers of the Ahlan Wa Sahalan Laundry.          This app makes it easier for the caretaker of Ahlan Wa Sahlan Laundry to notify customers that their laundry is done.          The app was also created so that the owner of Ahlan Wa Sahlan Laundry does not need to provide paper invoices, so it can be environmentally friendly.</string>
+</resources>

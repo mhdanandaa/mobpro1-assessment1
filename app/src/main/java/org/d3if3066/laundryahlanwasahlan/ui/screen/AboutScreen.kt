@@ -1,13 +1,12 @@
 package org.d3if3066.laundryahlanwasahlan.ui.screen
 
 import android.content.res.Configuration
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,7 +19,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -65,13 +64,30 @@ fun AboutScreen(navController: NavHostController) {
 fun ContentAbout(modifier: Modifier) {
 
     val imageModifier = Modifier.fillMaxWidth()
+        .clip(RoundedCornerShape(10.dp))
 
-    Image(
-        painter = painterResource(R.drawable.banner),
-        contentDescription = stringResource(R.string.imgae_description),
-        contentScale = ContentScale.Fit,
-        modifier = imageModifier
-    )
+    Column (
+        modifier = modifier
+            .fillMaxSize()
+            .padding(8.dp)
+
+    ){
+        Image(
+            painter = painterResource(R.drawable.banner),
+            contentDescription = stringResource(R.string.imgae_description),
+            contentScale = ContentScale.Fit,
+            modifier = imageModifier
+        )
+
+        Text(
+            text = stringResource(R.string.isi_about_aplikasi),
+            modifier = Modifier.padding(top = 10.dp)
+        )
+        Text(
+            text = stringResource(R.string.copyright),
+            modifier = Modifier.padding(top = 20.dp)
+        )
+    }
 }
 
 @Preview(showBackground = true)

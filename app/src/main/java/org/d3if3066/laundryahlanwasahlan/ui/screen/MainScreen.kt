@@ -31,11 +31,9 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionContext
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -90,8 +88,8 @@ fun MainScreen(navController: NavHostController) {
 
 @Composable
 fun ScreenContent(modifier: Modifier) {
-    var namaPelanggan by remember{ mutableStateOf("") }
-    var beratLaundry by remember { mutableStateOf("") }
+    var namaPelanggan by rememberSaveable{ mutableStateOf("") }
+    var beratLaundry by rememberSaveable { mutableStateOf("") }
 
     var namaPelangganError by rememberSaveable { mutableStateOf(false) }
     var beratLaundryError by rememberSaveable { mutableStateOf(false) }
@@ -169,22 +167,39 @@ fun ScreenContent(modifier: Modifier) {
             }
         }
 
-        Button(
-            onClick = {
-                namaPelangganError = (namaPelanggan == "" || namaPelanggan.isDigitsOnly())
-                beratLaundryError = (beratLaundry == "" || beratLaundry == "0")
-                
-                if(namaPelangganError || beratLaundryError) {
-                    return@Button
-                }
+        Row{
+            Button(
+                onClick = {
+                    namaPelangganError = (namaPelanggan == "" || namaPelanggan.isDigitsOnly())
+                    beratLaundryError = (beratLaundry == "" || beratLaundry == "0")
 
-                totalHarga = hargaLaundry(beratLaundry.toFloat(), kategori == radioOptions[0])
-            },
-            modifier = Modifier.padding(top = 8.dp),
-            contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
-        ) {
-            Text(text = stringResource(R.string.hitung))
+                    if(namaPelangganError || beratLaundryError) {
+                        return@Button
+                    }
+
+                    totalHarga = hargaLaundry(beratLaundry.toFloat(), kategori == radioOptions[0])
+                },
+                modifier = Modifier.padding(top = 8.dp, end = 30.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(R.string.hitung))
+            }
+            Button(
+                onClick = {
+                    namaPelanggan = ""
+                    beratLaundry = ""
+                    totalHarga = 0f
+                    namaPelangganError = false
+                    beratLaundryError = false
+                },
+                modifier = Modifier.padding(top = 8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(R.string.reset))
+            }
+
         }
+
 
         if(totalHarga != 0f) {
             Divider(
