@@ -16,6 +16,5 @@
     <string name="kembali">Ba</string>
     <string name="imgae_description">Image of Ahlan Wa Sahlan Laundry</string>
     <string name="reset">Reset</string>
-    <string name="info_aplikasi">The Ahlan Wa Sahlan Laundry App is an app created for the owners and caretakers of the Ahlan Wa Sahalan Laundry.          This app serves to make it easier for Ahlan Wa Sahlan Laundry\'s caretakers when they want to notify customers that their laundry is done.          It was also created so that the owner of Ahlan Wa Sahlan Laundry does not need to provide paper invoices, so it can be environmentally friendly.</string>
     <string name="isi_about_aplikasi">The Ahlan Wa Sahlan Laundry App is an app created for the owners and caretakers of the Ahlan Wa Sahalan Laundry.          This app makes it easier for the caretaker of Ahlan Wa Sahlan Laundry to notify customers that their laundry is done.          The app was also created so that the owner of Ahlan Wa Sahlan Laundry does not need to provide paper invoices, so it can be environmentally friendly.</string>
 </resources>
